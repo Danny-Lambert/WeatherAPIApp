@@ -1,5 +1,7 @@
 console.log("working");
 
+
+
 fetch("http://api.openweathermap.org/data/2.5/weather?q=Leeds&appid=bc52d396a55ab51ee55d98516702facc&units=metric")
     .then((response) => {
         return response.json()
@@ -15,6 +17,4 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Leeds&appid=bc52d396a55a
     .catch((error) => {
         print (error)
     });
-
-
 

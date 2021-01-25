@@ -4,4 +4,6 @@
 
 .card{
     border: 2px solid black;
+    text-align: center;
+    justify-content: center;
 }
