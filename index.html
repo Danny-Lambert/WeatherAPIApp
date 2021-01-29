@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <title>Weather App</title>
 </head>
 <body>
-    <h1>Weather</h1>
+    <h1>Weather App</h1>
 
 
         <div class="card" style="width: 18rem;">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
-              <h2 class="location"></h2>
+              <h2 class="locationAPI"></h2>
               <p class="card-text">See below for realtime current weather data</p>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Temperature in degrees</li><p class="temperature"></p>
-              <li class="list-group-item">Feels like</li><p class="feelsLike"></p>
-              <li class="list-group-item">Wind Speed in mph</li><p class="windSpeed"></p>
-            </ul>
+            <div class="fullDetails">
+              <div class="temperature">
+                <p class="temperatureText">Temperature in degrees</p><p class="temperatureAPI"></p>
+              </div>
+                <p class="list-group-item">Feels like</p><p class="feelsLikeAPI"></p>
+              <p class="list-group-item">Wind Speed in mph</p><p class="windSpeedAPI"></p>
+            </div>
           </div>
 
 
