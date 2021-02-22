@@ -11,20 +11,21 @@
 <body>
     <h1>Weather App</h1>
 
+    <div class="allCards">
 
         <div class="card" style="width: 18rem;">
-           
+          
             <div class="card-body">
               <h2 class="locationAPI"></h2>
-              <p class="card-text"></p>
+              
             </div>
             <div class="fullDetails">
               
               <div class="temperature">
-                <p class="temperatureAPI"></p>°<span>C</span>
+                <p class="temperatureText">Current temperature</p><p class="temperatureAPI"></p><p>°C</p>
               </div>
               <div class="temperature">
-                <p class="list-group-item">Feels like</p><p class="feelsLikeAPI"></p><p>°</p>
+                <p class="list-group-item">Feels like</p><p class="feelsLikeAPI"></p><p>°C</p>
               </div>
                 <div class="temperature">
               <p class="list-group-item">Wind Speed in mph</p><p class="windSpeedAPI"></p>
@@ -35,21 +36,36 @@
           <div class="card" style="width: 18rem;">           
             <div class="card-body">
               <h2 class="BarcalocationAPI"></h2>
-              <p class="card-text">See below for realtime current weather data</p>
             </div>
             <div class="fullDetails">
               <div class="temperature">
-                <p class="temperatureText">Temperature in degrees</p><p class="BarcatemperatureAPI"></p><p>°</p>
+                <p class="temperatureText">Current temperature</p><p class="BarcatemperatureAPI"></p><p>°C</p>
               </div>
               <div class="temperature">
-                <p class="list-group-item">Feels like</p><p class="BarcafeelsLikeAPI"></p><p>°</p>
+                <p class="list-group-item">Feels like</p><p class="BarcafeelsLikeAPI"></p><p>°C</p>
               </div>
                 <div class="temperature">
               <p class="list-group-item">Wind Speed in mph</p><p class="BarcawindSpeedAPI"></p>
                 </div>
             </div>
           </div>
-
+          <div class="card" style="width: 18rem;">           
+            <div class="card-body">
+              <h2 class="BerlinlocationAPI"></h2>
+            </div>
+            <div class="fullDetails">
+              <div class="temperature">
+                <p class="temperatureText">Current temperature</p><p class="BerlintemperatureAPI"></p><p>°C</p>
+              </div>
+              <div class="temperature">
+                <p class="list-group-item">Feels like</p><p class="BerlinfeelsLikeAPI"></p><p>°C</p>
+              </div>
+                <div class="temperature">
+              <p class="list-group-item">Wind Speed in mph</p><p class="BerlinwindSpeedAPI"></p>
+                </div>
+            </div>
+          </div>
+        </div>
 
 
     <script src="main.js"></script>
