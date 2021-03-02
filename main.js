@@ -1,45 +1,27 @@
 console.log("working");
 
+const button = document.querySelector('.button')
+const inputValue = document.querySelector('.inputValue')
+const name = document.querySelector('.name');
+const desc = document.querySelector('.desc');
+const temperatureAPI = document.querySelector('.temperatureAPI');
 
 
-fetch("http://api.openweathermap.org/data/2.5/weather?q=Leeds&appid=bc52d396a55ab51ee55d98516702facc&units=metric")
+button.addEventListener('click', function(){
+fetch("http://api.openweathermap.org/data/2.5/weather?q="+inputValue.value+"&appid=368552d4a7380198ebe4799c1cb1a179&units=metric")
 .then((response) => {
+
     return response.json()
 })
 .then ((jsonResponse) => {
-    console.log(jsonResponse)
+            console.log(jsonResponse)
+
     document.querySelector(".temperatureAPI").innerHTML = jsonResponse.main.temp;
     document.querySelector(".locationAPI").innerHTML = jsonResponse.name;
     document.querySelector(".feelsLikeAPI").innerHTML = jsonResponse.main.feels_like;
     document.querySelector(".windSpeedAPI").innerHTML = jsonResponse.wind.speed;
+})
     
-    })
-    .catch((error) => {
-        print (error)
-    });
-    
-    fetch("http://api.openweathermap.org/data/2.5/weather?q=barcelona&appid=bc52d396a55ab51ee55d98516702facc&units=metric")
-    .then((response) => {
-        return response.json()
-    })
-    .then ((jsonResponse) => {
-        console.log(jsonResponse)
-        document.querySelector(".BarcatemperatureAPI").innerHTML = jsonResponse.main.temp;
-        document.querySelector(".BarcalocationAPI").innerHTML = jsonResponse.name;
-        document.querySelector(".BarcafeelsLikeAPI").innerHTML = jsonResponse.main.feels_like;
-        document.querySelector(".BarcawindSpeedAPI").innerHTML = jsonResponse.wind.speed;
 
-    })
-
-    fetch("http://api.openweathermap.org/data/2.5/weather?q=berlin&appid=bc52d396a55ab51ee55d98516702facc&units=metric")
-    .then((response) => {
-        return response.json()
-    })
-    .then ((jsonResponse) => {
-        console.log(jsonResponse)
-        document.querySelector(".BerlintemperatureAPI").innerHTML = jsonResponse.main.temp;
-        document.querySelector(".BerlinlocationAPI").innerHTML = jsonResponse.name;
-        document.querySelector(".BerlinfeelsLikeAPI").innerHTML = jsonResponse.main.feels_like;
-        document.querySelector(".BerlinwindSpeedAPI").innerHTML = jsonResponse.wind.speed;
-
-    })
+        .catch(err => alert("Incorrect city entered")) 
+})
